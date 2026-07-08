@@ -1,13 +1,25 @@
-public class Noofwords {
-    public static void main(String[] args) {
-        String s="Hello from java programming";
-        int wordCount=0;
-        for(int i=0;i<s.length();i++){
-            if(s.charAt(i)==32){
-                wordCount++;
+import java.util.Scanner;
+public class Palidrome {
+    public static boolean isPalindrome(String s) {
+        int n=s.length();
+        for(int i=0;i<s.length()/2;i++){
+            if(s.charAt(i)!=s.charAt(n-1-i)){
+                return false;
             }
         }
-        System.out.println(wordCount+1);
+        return true;
+        
     }
+    public static void main(String[] args) {
+        Scanner in =new Scanner(System.in);
+        String s=in.next();
+        if(isPalindrome(s)){
+            System.out.print("Palindrome");
+        
+    }
+    else{
+        System.out.println("not Palindrome");
+    }
+}
     
 }

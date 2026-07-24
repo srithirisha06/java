@@ -1,7 +1,7 @@
 
 
 public class LinkedList1 {
-    Node head;
+    Treee head;
     LinkedList1() {
       
     }
